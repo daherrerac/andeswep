@@ -1,0 +1,310 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body{
+    font-size: 14px;    
+}
+h1{
+    font-size: 2.5em;
+    font-weight: bold;        
+    color: #03273a;
+}
+h2{
+    font-size: 2em;
+    font-weight: bold;        
+    color: #03273a;
+}
+h3{
+    font-size: 1.6em;
+    font-weight: bold;        
+    color: #03273a;
+}
+h4{
+    font-size: 1.3em;
+    font-weight: bold;        
+    color: #03273a;
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.login-logo img{
+    max-width: 80px;
+}
+.verde-lima-bg{
+    background-color: #02D46F;
+}
+.verde-lima-color{
+    color: #02D46F;
+}
+.logo{
+    max-width: 100px;
+}
+.logo img{
+    width: 100%;
+}
+.azul-andes-bg{
+    background-color: #03273A;
+}
+
+/*Específicos*/
+
+body.guest {
+    background: #2b4f5d url(/images/bg.jpg);
+    height: 100vh;
+    overflow-y: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.bienvenida img{
+    display: block;
+    max-width: 100px;
+    margin: 2em auto;
+}
+.menu-admin{
+    position: absolute;
+    bottom: 10%;
+    right: 0;  
+    width: 70px;  
+}
+.menu-admin a{
+    display: block;
+}
+.menu-admin img{
+    max-width: 70px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 64px;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+.sidenav a {
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #BFC5D2;
+    display: block;
+}
+.sidenav a img{
+    width: 1.4em;
+    display: inline-flex;    
+    margin-right: 0.6em;
+    margin-top: -8px;
+}  
+.sidenav a:hover {
+    color: #03273A;
+}
+.sidenav a:hover img{
+    filter: brightness(0) contrast(1);
+}
+  
+.main {
+    margin-left: 200px;     
+    padding: 1em 10px;
+    width: calc(100% - 200px);
+}
+.app-menu img{
+    max-width: 70px;
+}
+.app-menu span{
+    color: #03273A;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.icons img{
+    max-width: 60px;
+    width: 60px;
+}
+.icons span{
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: #02D46F;
+}
+img.social-icons{
+    max-width: 35px;
+    display: inline-flex;
+    padding: 0 5px;
+}
+.listado img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;        
+}
+.listado a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+}
+.listado svg{
+    width: 35px;
+    height: auto;
+}
+.clima i{
+    font-size: 22px;
+    display: inline-flex;
+    color: #ffffff;
+}
+.clima .icono p{
+    height: 100%;
+    text-align: center;
+}
+.clima .icono i{
+    font-size: 50px;    
+    display: block;
+    text-align: center;    
+}
+.clima .card{
+    background: #03273a;
+    color: #f1f1f1;
+    border-radius: 2em;
+    max-width: 280px;
+    margin: 20px auto;
+} 
+.clima .card p{
+    text-align: center;
+    padding: 10px 0;
+    line-height: 1.5em;
+}
+.clima .card .icono{
+    padding-bottom: 2em;
+}
+.current .icono i{
+    font-size: 50px;        
+    text-align: center;
+    margin-left: 2em;    
+}
+iframe{
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: 20px auto;
+} 
+.upload-custom input {
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+    height: 100%;
+}
+#map { 
+    width: 600px;
+    height: 580px;    
+}
+.identificador{
+    visibility: hidden;
+}
+ul.typeahead{    
+    background-color: #f8f8f8;
+    margin-top: 5px;
+}
+.typeahead li{
+    padding: 0.5em;
+    height: 40px;
+    border-bottom: 1px dotted #03273A;
+}
+.typeahead li:hover{
+    color: #ffffff;
+    background-color: #03273A;
+}
+/*Menu*/
+.menu{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f3f4f6;
+    box-shadow: 1px 1px 5px #03273A;    
+}
+.menu img{    
+    max-width: 30px;    
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F7F7F7;    
+    box-shadow: 1px 1px 2px #03273aad;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+}
+  
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #BFC5D2;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a img{
+    width: 1.5em;
+    display: inline-flex;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #79AF1D;
+}
+  
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 50px;
+}
+  
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media screen and (min-width:1024px) {
+    .menu{
+        width: 20%;
+    }
+}
+@media screen and (min-width:768px) {
+    .menu-admin{
+        top: 30%;
+    }
+    .menu{        
+        top: 70px;        
+        background-color: transparent;
+        box-shadow: none;
+    }    
+}
+
+
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
