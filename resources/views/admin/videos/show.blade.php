@@ -25,11 +25,7 @@
             </div>
         
         
-            <div class="mx-auto text-center">
-                <h4 class="py-3">
-                    <strong>Url:</strong>
-                    <span>{{ $video->url }}</span>
-                </h4>
+            <div class="mx-auto text-center">                
                 <iframe src="{{ $video->url }}" frameborder="0" class="block mx-auto"></iframe>
             </div>
             
