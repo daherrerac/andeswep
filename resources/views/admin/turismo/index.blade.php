@@ -51,13 +51,12 @@
                     </td>
                 </tr>
                 @endforeach
-            </table>  
-            {!! $data->links() !!} 
-
+            </table>              
         </div>
-
-
     </div>
+    <div class="pagination w-2/3 mx-auto my-5">
+        {!! $data->links() !!} 
+    </div> 
 
 
     @endif

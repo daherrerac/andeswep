@@ -51,17 +51,17 @@
                     </tr>
                     @endforeach
                 </table> 
-            </div> 
-            {!! $data->links() !!} 
-
+            </div>             
             <h3>
                 Insertar Material
             </h3>
             <div class="bg-white shadow-md rounded my-6 py-6">
                 <a class="azul-andes-bg text-white py-2 px-4 ml-2 border border-white-400 rounded shadow" href="/admin/materialevento/add">A un Evento</a>
                 <a class="azul-andes-bg text-white py-2 px-4 ml-2 border border-white-400 rounded shadow" href="/admin/materialactividad/add">A una Actividad</a>
-            </div>
-                        
+            </div>                        
         </div>
+        <div class="pagination w-2/3 mx-auto my-5">
+            {!! $data->links() !!} 
+        </div> 
     @endif
 @endsection

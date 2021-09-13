@@ -7,7 +7,7 @@
     @if(Auth::user()->hasRole('admin')) 
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <h1 class="text-left pt-20 pb-10">
-            Editar evento
+            Editar actividad
         </h1>
 
         @if($errors->any())
@@ -26,21 +26,21 @@
             <form class="w-full my-5 px-5 py-5" action="{{ route('actividades.update',$actividade->id) }}" method="POST">
                 @csrf
                 @method('PUT')
-                
                 <div class="w-full">
-                    <label class="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4" for="inline-full-name">
-                        Titulo:
-                    </label>
+                    <label class="block text-gray-500 font-bold md:text-left  md:mb-3 pr-4 text-xl">Editar actividad</label>
                 </div>
-                <div class="w-full">
-                    <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name" name="titulo" type="text" placeholder="Ingresar título" value="{{ $actividade->titulo }}">
+                                
+                <div class="py-3"></div>
+                <div class="md:flex md:items-center mb-6">                                          
+                  <div class="w-full">
+                    <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name" name="titulo" type="text" placeholder="Ingresar título de la actividad" value="{{ $actividade->titulo }}">
+                  </div>
                 </div>
-
-                <div class="py-5"></div>
+                                           
                 <div class="md:flex">
 
                     <div class="w-1/2 pr-3">
-                        <label for="datepicker" class="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4">Fecha de inicio del evento</label>
+                        <label for="datepicker" class="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4">Fecha de inicio de la actividad</label>
                         <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
                             <div class="mx-auto  py-2">
                                 <div class="mb-5 w-full">                                                            
@@ -140,7 +140,7 @@
                     
     
                     <div class="w-1/2 pl-3">
-                        <label for="datepicker2" class="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4">Fecha de finalización del evento</label>
+                        <label for="datepicker2" class="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4">Fecha de finalización de la actividad</label>
                         <div x-data="app2()" x-init="[initDate(), getNoOfDays()]" x-cloak>
                             <div class="mx-auto  py-2">
                                 <div class="mb-5 w-full">                                                            
@@ -239,18 +239,81 @@
                     </div>
 
                 </div>
-                
-                
-                <div class="w-full">
-                    <label class="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4" for="inline-full-name2">
-                        Titulo:
-                    </label>
-                </div>
-                
-                <div class="w-full">
-                    <textarea class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name2" name="descripcion"  cols="30" rows="7">{{ $actividade->titulo }}</textarea>                      
-                </div>
 
+                <div class="flex">
+                    <div class="w-1/2 pr-3">
+                        <div class="w-full">
+                            <label class="block text-gray-500 font-bold md:text-left  md:mb-0 pr-4">Hora inicio</label>
+                        </div>
+                        <!-- component -->
+                        <div class="mt-2 w-40">
+                            <div class="flex">
+                            <select name="hours" class="bg-transparent  appearance-none outline-none">
+                                <option value="1" selected="selected">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">10</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span class="text-xl mx-3">:</span>
+                            <select name="minutes" class="bg-transparent  appearance-none outline-none mr-4">
+                                <option value="00" selected="selected">00</option>
+                                <option value="15">15</option>
+                                <option value="30">30</option>
+                                <option value="45">45</option>
+                            </select>
+                            <select name="ampm" class="bg-transparent  appearance-none outline-none">
+                                <option value="AM" selected="selected">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 pl-3">
+                        <div class="w-full">
+                            <label class="block text-gray-500 font-bold md:text-left  md:mb-0 pr-4">Hora fin</label>
+                        </div>
+                        <!-- component -->
+                        <div class="mt-2 w-40">
+                            <div class="flex">
+                            <select name="hours_end" class="bg-transparent  appearance-none outline-none">
+                                <option value="1" selected="selected">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">10</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span class="text-xl mx-3">:</span>
+                            <select name="minutes_end" class="bg-transparent  appearance-none outline-none mr-4">
+                                <option value="00" selected="selected">00</option>                                    
+                                <option value="15">15</option>
+                                <option value="30">30</option>
+                                <option value="45">45</option>
+                            </select>
+                            <select name="ampm_end" class="bg-transparent  appearance-none outline-none">
+                                <option value="AM" selected="selected">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-5"></div>
                 <div class="w-full">
                     <label class="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4" for="inline-full-name2">
                         Descripción:
@@ -260,25 +323,22 @@
                 <div class="w-full">
                     <textarea class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name2" name="descripcion"  cols="30" rows="7">{{ $actividade->descripcion }}</textarea>                      
                 </div>
+    
+                <div class="py-3"></div>
+                                                                                                
+
                 
     
-                <div class="py-5"></div>
-                
-                
-                                    
-                
-                <div class="md:flex md:items-center">
-                    <div class="w-full py-10">
-                        <button class="shadow verde-lima-bg  focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
-                            Guardar
-                        </button>
-                    </div>
+                <div class="md:flex items-center">                      
+                  <div class="w-full py-10">
+                    <button class="shadow verde-lima-bg  focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
+                      Guardar
+                    </button>
+                  </div>
                 </div>
             </form>
-    
         </div>
-
-
+        
         
 
         
@@ -328,7 +388,7 @@
                     let selectedDate = new Date(this.year, this.month, date);
                     this.datepickerValue = selectedDate.toDateString();
     
-                    this.$refs.date.value = selectedDate.getFullYear() +"-"+ ('0'+ selectedDate.getMonth()).slice(-2) +"-"+ ('0' + selectedDate.getDate()).slice(-2);
+                    this.$refs.date.value = selectedDate.getFullYear() +"-"+ ('0'+ (selectedDate.getMonth()+1)).slice(-2) +"-"+ ('0' + selectedDate.getDate()).slice(-2);
     
                     console.log(this.$refs.date.value);
     
@@ -385,7 +445,7 @@
                     let selectedDate = new Date(this.year, this.month, date);
                     this.datepickerValue = selectedDate.toDateString();
     
-                    this.$refs.date.value = selectedDate.getFullYear() +"-"+ ('0'+ selectedDate.getMonth()).slice(-2) +"-"+ ('0' + selectedDate.getDate()).slice(-2);
+                    this.$refs.date.value = selectedDate.getFullYear() +"-"+ ('0'+ (selectedDate.getMonth()+1)).slice(-2) +"-"+ ('0' + selectedDate.getDate()).slice(-2);
     
                     console.log(this.$refs.date.value);
     
