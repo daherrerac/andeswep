@@ -9,7 +9,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="bienvenida">
                     <h1 class="text-center pt-5">
-                        Web app Andes
+                        Be Andes!
                     </h1>
                 </div>
                 @if((Auth::check()))
