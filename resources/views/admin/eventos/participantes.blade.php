@@ -14,24 +14,19 @@
                 <div class="col-auto">
                     
                 </div>
-                @foreach ($panelista as $item)
-                    @if ($contenido->id_panelista == $item->id)
-                        <div class="col-auto">                                                    
-                            <img src="{{ asset("/storage/".$item->path) }}" alt="{{ $item->nombre }}" class="block mx-auto p-2 rounded">                                                                                        
-                        </div>
-                        <div class="col-span-2 ">
-                            <strong class="block verde-andes mt-5">{{ $item->nombre }}</strong>                    
-                        </div>
-                        <div class="col-auto my-auto text-right">
-                            <a class="block mx-auto" href="{{ route('panelistas.show',$item->id) }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 verde-andes block mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div> 
-                    @endif  
-                @endforeach
-                
+
+                <div class="col-span-2 ">
+                    <strong class="block verde-andes mt-5">{{ $contenido->nombre }}</strong>                    
+                </div>
+                <div class="col-auto my-auto text-right">
+                    {{-- <a class="block mx-auto" href="{{ route('panelistas.show',$contenido->id) }}"> --}}
+                    <a class="block mx-auto" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 verde-andes block mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div> 
+                                
             </div>
         
             
