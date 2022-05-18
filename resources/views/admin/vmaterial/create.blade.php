@@ -20,7 +20,7 @@
       <h2 class="text-left py-5">Añadir nuevo video</h2>
         
     <div class="bg-white shadow-md">
-    <form class="w-full my-5 px-5 py-5" action="{{ route('videos.store') }}" method="POST">
+    <form class="w-full my-5 px-5 py-5" action="{{ route('vmaterial.store') }}" method="POST">
       @csrf
       <div class="py-3"></div>
       <div class="w-full">
@@ -29,7 +29,7 @@
         </label>
       </div>
       <div class="w-full">
-        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name" name="titulo" type="text" placeholder="Ingresar título">
+        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name"  name="titulo" type="text" placeholder="Ingresar título" value={{ old('titulo') }}>
       </div>
       <div class="py-3"></div>
       <div class="w-full">
@@ -38,7 +38,7 @@
         </label>
       </div>
       <div class="w-full">
-        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name2" name="url" type="text" placeholder="Ingresar link">
+        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name2" name="url" type="text"  placeholder="Ingresar link" value={{ old('url') }}>
       </div>
 
       

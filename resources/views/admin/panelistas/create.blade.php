@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="w-full">
-                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name" name="nombre" type="text" placeholder="Ej: Juan Botero">
+                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name" name="nombre" type="text" placeholder="Ej: Juan Botero" value={{ old('nombre') }}>
                     </div>
                     
                     <div class="py-3"></div>
@@ -60,7 +60,7 @@
                     </div>  
                     
                     <div class="w-full">                        
-                        <textarea class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name2" name="resumen"  cols="30" rows="5" maxlength="100"></textarea>                                              
+                        <textarea class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-name2" name="resumen"  cols="30" rows="5" maxlength="200">{{ old('resumen') }}</textarea>                                              
                     </div>
                     
                     <div class="w-full">
@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="w-full">                        
-                        <textarea class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-nameh" name="hv"  cols="30" rows="10"></textarea>                                              
+                        <textarea class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" id="inline-full-nameh" name="hv"  cols="30" rows="10">{{ old('hv') }}</textarea>                                              
                     </div>
 
                     <div class="py-3"></div>

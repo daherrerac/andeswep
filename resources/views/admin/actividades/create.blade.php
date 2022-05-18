@@ -254,7 +254,7 @@
                             <!-- component -->
                             <div class="mt-2 w-40">
                                 <div class="flex">
-                                <select name="hours" class="bg-transparent  appearance-none outline-none">
+                                <select name="hours" class="bg-transparent  appearance-none outline-none" value={{ old('hours') }}>
                                     <option value="1" selected="selected">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -265,17 +265,17 @@
                                     <option value="8">8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
-                                    <option value="11">10</option>
+                                    <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
                                 <span class="text-xl mx-3">:</span>
-                                <select name="minutes" class="bg-transparent  appearance-none outline-none mr-4">
+                                <select name="minutes" class="bg-transparent  appearance-none outline-none mr-4" value={{ old('minutes') }}>
                                     <option value="00" selected="selected">00</option>
                                     <option value="15">15</option>
                                     <option value="30">30</option>
                                     <option value="45">45</option>
                                 </select>
-                                <select name="ampm" class="bg-transparent  appearance-none outline-none">
+                                <select name="ampm" class="bg-transparent  appearance-none outline-none" value={{ old('ampm') }}>
                                     <option value="AM" selected="selected">AM</option>
                                     <option value="PM">PM</option>
                                 </select>
@@ -290,7 +290,7 @@
                             <!-- component -->
                             <div class="mt-2 w-40">
                                 <div class="flex">
-                                <select name="hours_end" class="bg-transparent  appearance-none outline-none">
+                                <select name="hours_end" class="bg-transparent  appearance-none outline-none" value={{ old('hours_end') }}>
                                     <option value="1" selected="selected">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -301,17 +301,17 @@
                                     <option value="8">8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
-                                    <option value="11">10</option>
+                                    <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
                                 <span class="text-xl mx-3">:</span>
-                                <select name="minutes_end" class="bg-transparent  appearance-none outline-none mr-4">
+                                <select name="minutes_end" class="bg-transparent  appearance-none outline-none mr-4" value={{ old('minutes_end') }}>
                                     <option value="00" selected="selected">00</option>                                    
                                     <option value="15">15</option>
                                     <option value="30">30</option>
                                     <option value="45">45</option>
                                 </select>
-                                <select name="ampm_end" class="bg-transparent  appearance-none outline-none">
+                                <select name="ampm_end" class="bg-transparent  appearance-none outline-none" value={{ old('ampm_end') }}>
                                     <option value="AM" selected="selected">AM</option>
                                     <option value="PM">PM</option>
                                 </select>

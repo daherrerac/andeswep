@@ -40,7 +40,7 @@ class PanelistaController extends Controller
     {
         $request->validate([                        
             'nombre' => 'required',            
-            'profile_picture' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',            
+            'profile_picture' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',            
             'hv' => 'required',
         ]);
 

@@ -16,7 +16,7 @@ class CreatePanelistasTable extends Migration
         Schema::create('panelistas', function (Blueprint $table) {
             $table->id();                        
             $table->string('nombre');
-            $table->string('profile_picture');
+            $table->string('profile_picture')->nullable(); 
             $table->string('path')->nullable();            
             $table->string('fb')->nullable();
             $table->string('tw')->nullable();

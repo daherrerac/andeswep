@@ -13,7 +13,9 @@
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         @foreach ($contenidos as $contenido)
             <div class="col-auto">
-                <iframe src="{{ $contenido->url }}" frameborder="0"></iframe>
+                <iframe src="{{ $contenido->url }}" frameborder="0" allowfullscreen></iframe>
+                
+                <a href="{{ $contenido->url }}" target="_blank" rel="noopener noreferrer" style="text-align: center;display:block;z-index:3">{{ $contenido->titulo }}</a>
             </div>
         @endforeach
     </div>        

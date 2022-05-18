@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Vmaterial extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'titulo', 'url'
+    ];
 }

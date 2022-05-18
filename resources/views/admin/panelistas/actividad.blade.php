@@ -45,7 +45,7 @@
                         <label class="block text-gray-500 font-bold md:text-left  md:mb-3 pr-4">Seleccione la actividad relacionada</label>
                         
                         <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" type="text" id="search" name="search" placeholder="Seleccione una actividad de la lista" />
-                        <input type="text" id="search2" name="evento" placeholder="Id Evento" class="form-control identificador" />  
+                        <input type="text" id="search2" name="evento" placeholder="Id Evento" class="form-control identificador" value={{ old('evento') }}/>  
                     </div>
                     <div class="my-5"></div>
 

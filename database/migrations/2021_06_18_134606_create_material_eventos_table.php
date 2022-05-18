@@ -19,7 +19,7 @@ class CreateMaterialEventosTable extends Migration
             $table->string('titulo');
             $table->string('imagen');
             $table->string('path')->nullable();            
-            $table->string('link');
+            $table->string('link')->nullable(); 
             $table->longText('descripcion');
             $table->timestamps();
         });

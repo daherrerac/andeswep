@@ -11,16 +11,13 @@
             
                 
         <h2 class="py-20"> Video</h2>
-                
-            
-        
-
+                                    
         <div class="w-full mx-auto">
             
             <div class="text-center">
                 <h3 class="py-3">
                     <strong>Titulo:</strong>
-                    {{ $video->titulo }}
+                    {{ $vmaterial->titulo }}
                 </h3>
             </div>
         
@@ -28,9 +25,9 @@
             <div class="mx-auto text-center">
                 <h4 class="py-3">
                     <strong>Url:</strong>
-                    <span>{{ $video->url }}</span>
+                    <span>{{ $vmaterial->url }}</span>
                 </h4>
-                <iframe src="{{ $video->url }}" frameborder="0" class="block mx-auto"></iframe>
+                <iframe src="{{ $vmaterial->url }}" frameborder="0" class="block mx-auto" allowfullscreen></iframe>
             </div>
             
         </div>

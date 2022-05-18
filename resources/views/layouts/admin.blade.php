@@ -67,7 +67,7 @@
                     <img src="/images/iconos/icon_fitness.svg" alt="">
                     Fitness
                 </a>
-                <a href="#about">
+                <a href="/galeria">
                     <img src="/images/iconos/icon_fotos.svg" alt="">
                     Fotos
                 </a>
